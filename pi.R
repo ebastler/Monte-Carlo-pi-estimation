@@ -3,12 +3,12 @@ data <- read.csv(file="pi.log", header=F)
 #A sufficiently precise known literature value of pi to be added as a comparison 
 piLit <- 3.14159265359
 
-png("montecarlo.png", width = 1000, height = 1000)
+
 #Assign separate variables for sample count and pi values
 sampleCount <- data$V1
 pi <- data$V2
 
-
+png("montecarlo.png", width = 1000, height = 1000)
 #Two plots above each other, low vertical margins in between
 par(mfrow=c(2,1),
     oma = c(4,0,3,0) + 0.1,
