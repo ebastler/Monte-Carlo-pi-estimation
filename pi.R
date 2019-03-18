@@ -3,7 +3,7 @@ data <- read.csv(file="pi.log", header=F)
 #A sufficiently precise known literature value of pi to be added as a comparison 
 piLit <- 3.14159265359
 
-
+png("montecarlo.png", width = 1000, height = 1000)
 #Assign separate variables for sample count and pi values
 sampleCount <- data$V1
 pi <- data$V2
@@ -55,3 +55,4 @@ title(xlab = "Number of point samples",
       line = 2,
       outer = TRUE
 )
+dev.off()
